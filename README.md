@@ -9,5 +9,8 @@ Some services use rxjs as dependency for observerable features
 
 ## WIP
 
+### Documentation
+Generate usecase and api documentation for each service and util
+
 ### Generator for typescript projects
 Should generate definition files for typescript.
