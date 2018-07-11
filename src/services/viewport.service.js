@@ -1,5 +1,4 @@
-import { fromEvent } from 'rxjs/observable';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, Subject, fromEvent } from 'rxjs';
 
 export const MEDIA_QUERY_TYPES_FOUNDATION = [
   'small',
@@ -25,7 +24,7 @@ export class ViewportService {
    * constructor
    */
   constructor (mediaQueryTypes = MEDIA_QUERY_TYPES_FOUNDATION) {
-    this.scope = global || window;
+    this.scope = typeof global === 'undefined' ? window : global;
     this.isBrowser = typeof document === 'object';
     this.document = this.isBrowser ? document : null;
     this.rootNode = this.scope;

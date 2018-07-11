@@ -1,7 +1,7 @@
 import { ReplaySubject } from 'rxjs';
 import { type } from '../utils/type';
 
-const handler = global ? global.history : window.history;
+const handler = typeof global === 'undefined' ? window.history : global.history;
 const SUPPORTED = type.object(handler);
 
 /**

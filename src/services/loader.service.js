@@ -1,4 +1,4 @@
-import { fromEvent } from 'rxjs/observable';
+import { fromEvent } from 'rxjs';
 
 /**
  * loader service provider
