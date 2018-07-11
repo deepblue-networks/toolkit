@@ -1,6 +1,4 @@
-import { Subject } from 'rxjs';
-import { fromEvent } from 'rxjs/observable'
-
+import { Subject, fromEvent } from 'rxjs';
 import { type } from '../utils/type';
 
 // feature detection and wrapping

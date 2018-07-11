@@ -1,6 +1,5 @@
 import { delay } from '../utils/delay';
-import { BehaviorSubject } from 'rxjs';
-import { from } from 'rxjs/observable';
+import { BehaviorSubject, from } from 'rxjs';
 
 let index = 0;
 
