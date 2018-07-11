@@ -1,6 +1,5 @@
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
-import 'rxjs/add/observable/fromEvent';
+import { Subject } from 'rxjs';
+import { fromEvent } from 'rxjs/observable'
 
 import { type } from '../utils/type';
 
@@ -63,7 +62,7 @@ class FullscreenService {
     this.onExit = new Subject();
 
     if (this.supported) {
-      Observable.fromEvent(scope, changeEvent).subscribe(event => {
+      fromEvent(scope, changeEvent).subscribe(event => {
         this.onChange.next(event);
 
         if (!this.isEnable) {

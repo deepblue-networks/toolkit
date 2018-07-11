@@ -1,5 +1,4 @@
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/fromEvent';
+import { fromEvent } from 'rxjs/observable';
 
 /**
  * loader service provider
@@ -34,7 +33,7 @@ export class LoaderService {
         const tag = document.createElement('link');
         tag.rel = `stylesheet`;
         tag.href = file;
-        const subscription = Observable.fromEvent(tag, 'load');
+        const subscription = fromEvent(tag, 'load');
 
         this.loaders[file] = {
           tag,
@@ -64,7 +63,7 @@ export class LoaderService {
         const tag = document.createElement('script');
         tag.src = file;
         tag.async = true;
-        const subscription = Observable.fromEvent(tag, 'load');
+        const subscription = fromEvent(tag, 'load');
 
         this.loaders[file] = {
           tag,

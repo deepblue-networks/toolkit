@@ -28,18 +28,6 @@ Object.keys(_config).forEach(function (key) {
   });
 });
 
-var _detection = require('./detection.service');
-
-Object.keys(_detection).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _detection[key];
-    }
-  });
-});
-
 var _event = require('./event.service');
 
 Object.keys(_event).forEach(function (key) {

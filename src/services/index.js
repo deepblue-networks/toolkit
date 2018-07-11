@@ -2,7 +2,6 @@
 
 export * from './bounds.service';
 export * from './config.service';
-export * from './detection.service';
 export * from './event.service';
 export * from './fullscreen.service';
 export * from './history.service';
