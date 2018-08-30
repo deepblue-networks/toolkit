@@ -11,7 +11,7 @@ export class Storage {
    * @param prefix internal prefix predefine
    */
   constructor(storageType, prefix = '') {
-    const scope = global || window;
+    const scope = typeof global === 'undefined' ? window : global;
     this.prefix = prefix;
     this.type = storageType;
     this.handlerName = `${storageType}Storage`;

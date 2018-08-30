@@ -22,8 +22,8 @@ export class LoggerService {
    * @param logLevel
    */
   constructor(logLevel) {
-    const scope = global || window;
-    this.supported = scope['console'] === 'object';
+    const scope = typeof global === 'undefined' ? window : global;
+    this.supported = typeof scope['console'] === 'object';
     this.supportedMethod = {};
 
     methods.forEach(method => {
