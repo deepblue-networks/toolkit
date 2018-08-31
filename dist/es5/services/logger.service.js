@@ -65,10 +65,6 @@ var LoggerService = exports.LoggerService = function () {
   _createClass(LoggerService, [{
     key: 'setLevel',
     value: function setLevel(logLevel) {
-      if (this.supported) {
-        this.info('Logger level', logLevel);
-      }
-
       this.logLevel = logLevel;
 
       // init all internal log function
@@ -77,6 +73,11 @@ var LoggerService = exports.LoggerService = function () {
       this.info = this.supportedMethod.info && this.logLevel >= LEVEL_INFO ? console.info.bind(console) : noop;
       this.log = this.supportedMethod.log && this.logLevel >= LEVEL_LOG ? console.log.bind(console) : noop;
       this.debug = this.supportedMethod.debug && this.logLevel >= LEVEL_DEBUG ? console.debug.bind(console) : noop;
+
+      if (this.supported) {
+        this.info('Logger level', logLevel);
+      }
+
       return this;
     }
   }]);
