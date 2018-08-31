@@ -1,5 +1,5 @@
 import { ReplaySubject } from 'rxjs';
-import 'rxjs-compat/add/operator/filter';
+import 'rxjs/add/operator/filter';
 
 /**
  * Event service class
