@@ -26,13 +26,8 @@
     "babel-core": "^6.26.3",
     "babel-jest": "^22.4.3",
     "babel-preset-env": "^1.7.0",
-    "glob": "^7.1.2",
-    "jasmine-core": "^3.1.0",
     "jest": "^22.4.3",
     "jsdoc": "^3.5.5",
-    "karma": "^2.0.4",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-jasmine": "^1.1.2",
     "regenerator-runtime": "^0.11.1"
   },
   "scripts": {
@@ -40,6 +35,6 @@
     "build": "npm run build-es5",
     "build-es5": "babel src --out-dir dist/es5 --ignore spec.js,test.js",
     "build:watch": "cd src && update-call .*js$ babel %0 --out-dir ../dist",
-    "build-docs": "jsdoc -r src"
+    "build-docs": "jsdoc -r src -d docs"
   }
 }

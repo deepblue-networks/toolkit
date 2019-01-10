@@ -11,6 +11,8 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _rxjs = require('rxjs');
 
+var _computedStyle = require('../utils/computedStyle');
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var MEDIA_QUERY_TYPES_FOUNDATION = exports.MEDIA_QUERY_TYPES_FOUNDATION = ['small', 'medium', 'large', 'xlarge', 'xxlarge'];
@@ -99,7 +101,7 @@ var ViewportService = exports.ViewportService = function () {
       this.mediaQueryTypes.forEach(function (name) {
         var metaNode = document.querySelector('meta[name="media:' + name + '"]');
         if (metaNode) {
-          var style = getComputedStyle(metaNode);
+          var style = (0, _computedStyle.computedStyle)(metaNode);
           var mediaQueryString = String(style.fontFamily);
           mediaQueryString = mediaQueryString.substr(1, mediaQueryString.length - 2); // trim "
           var matcher = _this2.scope.matchMedia(mediaQueryString);

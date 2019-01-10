@@ -1,4 +1,5 @@
 import { BehaviorSubject, Subject, fromEvent } from 'rxjs';
+import {computedStyle} from '../utils/computedStyle';
 
 export const MEDIA_QUERY_TYPES_FOUNDATION = [
   'small',
@@ -94,7 +95,7 @@ export class ViewportService {
     this.mediaQueryTypes.forEach(name => {
       const metaNode = document.querySelector(`meta[name="media:${name}"]`);
       if (metaNode) {
-        const style = getComputedStyle(metaNode);
+        const style = computedStyle(metaNode);
         let mediaQueryString = String(style.fontFamily);
         mediaQueryString = mediaQueryString.substr(1, mediaQueryString.length -
           2); // trim "
