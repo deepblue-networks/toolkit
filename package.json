@@ -1,12 +1,12 @@
 {
   "name": "@deepblue/toolkit",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "toolkit scripts and utilities",
   "main": "dist/es5/index",
   "module": "src/index",
   "repository": {
     "type": "git",
-    "url": "git@git.db-n.com:dbn-kickstart/toolkit.git"
+    "url": "git@github.com:deepblue-networks/toolkit.git"
   },
   "keywords": [
     "services",
